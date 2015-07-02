@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Website;
+<?php namespace App\Http\Controllers\Caviste;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -11,10 +11,10 @@ class JoinController extends Controller {
 	public function send(){
 		Mail::send('emails.invit', [
 			'name' => Input::get('name'),
-			'email' => Input::get('email'), 
+			'email' => Input::get('email'),
 			'phone' => Input::get('phone'),
-			'date' => Date::now()->format('l j F Y').' à '.Date::now()->format('H:i:s')], 
-		
+			'date' => Date::now()->format('l j F Y').' à '.Date::now()->format('H:i:s')],
+
 			function($message){
 				$message->to(env('MAIL_ACCOUNT').'@'.env('URL'))->subject('WinoApp > Demande d\'inscription');
 			}

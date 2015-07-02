@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller {
 
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
 	public function index(){
-		$title = 'Wino | Votre nouveau canal de vente';
-		return view('public.home', compact("title"));
+		return view('public.index');
 	}
 
 }
