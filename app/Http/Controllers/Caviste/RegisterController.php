@@ -46,7 +46,6 @@ class RegisterController extends Controller {
 		        	'compagny' => Input::get('compagny'),
 		            'email' => Input::get('email'),
 		            'roles' => ['client'],
-		            'password' => Input::get('password')
 		            'password' => Input::get('password'),
 					'website' => Input::get('url'),
 					'phone' => Input::get('phone'),

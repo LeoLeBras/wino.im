@@ -9,12 +9,12 @@ class UserTableSeeder extends Seeder {
     public function run(){
         DB::table('users')->truncate();
         User::create([
-        	'name' => 'Test',
-        	'compagny' => 'Test',
-            'email' => 'test@test.fr',
+        	'name' => 'Nans',
+        	'compagny' => 'Wino',
+            'email' => 'nans.thomas@hetic.net',
             'roles' => ['admin'],
-            'password' => '0000'
-        ]);  
+            'password' => 'wino2015'
+        ]);
     }
-    
+
 }
