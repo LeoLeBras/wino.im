@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use \Hash; 
+use \Hash;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -23,7 +23,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password', 'roles', 'compagny'];
+	protected $fillable = ['name', 'email', 'password', 'roles', 'compagny', 'website', 'phone', 'place', 'city', 'schedule', 'siret', 'denomination', 'description'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

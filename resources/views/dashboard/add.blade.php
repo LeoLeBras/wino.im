@@ -1,13 +1,13 @@
 @extends('dashboard/layout-backoffice')
 
 @section('breadcrumb')
-    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Mes vins</a></li> 
-    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.wine.add') }}" class="Breadcrumb_link">Ajouter un vin</a></li> 
+    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Mes vins</a></li>
+    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.wine.add') }}" class="Breadcrumb_link">Ajouter un vin</a></li>
 @endsection
 
 @section('content')
     <h2 class="Wrapper_title">Ajouter un vin</h2>
-    <form method="POST" action="{{ URL::route('dashboard.wine.add') }}"> 
+    <form method="POST" action="{{ URL::route('dashboard.wine.add') }}">
         @if(Session::has('response') && Session::get('response') == 'error')
             <div class="alerts">
                 <div class="alert -error">
@@ -55,7 +55,7 @@
                 @endif
             </div>
             <div>
-                <label for="color">Couleur :</label>
+                <label for="color">Type :</label>
                 <div class="input-select" data-placeholder="Choisir une couleur">
                     <input type="text" name="color" readonly value="{{ old('color') }}" @if(Session::has('color')) class="-error" @endif>
                     <ul>
@@ -71,7 +71,7 @@
                 @endif
             </div>
             <div>
-                <label for="year">Millésime :</label>
+                <label for="year">Année :</label>
                 <input id="year" name="year" type="text" value="{{ old('year') }}" @if(Session::has('year')) class="-error" @endif>
                 <div class="input-info">
                     ex: 1999
@@ -110,7 +110,7 @@
             <button class="btn -blue">Vailder</button>
         </div>
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-    </form>    
+    </form>
 @endsection
 
 @section('javascript')

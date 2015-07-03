@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html class="no-js" lang="fr"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
@@ -21,7 +21,7 @@
                         <div class="col-sm-12">
                             <div class="utility-inner clearfix">
                                 <span class="alt-font"> </span>
-                                <span class="alt-font"><i class="icon icon_mail"></i> {{ 'team@'.env('URL') }} </span>
+                                <span class="alt-font"><i class="icon icon_mail"></i> {{ 'hello@'.env('URL') }} </span>
                                 <div class="pull-right">
                                     <a href="{{ URL::route('login') }}" class="btn btn-primary btn-white btn-xs">Connexion</a>
                                 </div>
@@ -75,4 +75,3 @@
         @yield('javascript')
     </body>
 </html>
-                
