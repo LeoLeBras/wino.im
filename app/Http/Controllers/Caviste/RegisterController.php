@@ -47,6 +47,15 @@ class RegisterController extends Controller {
 		            'email' => Input::get('email'),
 		            'roles' => ['client'],
 		            'password' => Input::get('password')
+		            'password' => Input::get('password'),
+					'website' => Input::get('url'),
+					'phone' => Input::get('phone'),
+					'place' => Input::get('place'),
+					'city' => Input::get('city'),
+					'schedule' => Input::get('schedule'),
+					'siret' => Input::get('siret'),
+					'denomination' => Input::get('denomination'),
+					'description' => ''
 		        ]);
 
 				Mail::send('emails.register', [

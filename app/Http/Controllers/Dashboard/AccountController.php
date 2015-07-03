@@ -25,6 +25,14 @@ class AccountController extends Controller {
  				'username' => 'required',
  	            'compagny' => 'required',
  	            'email' => 'required',
+ 	            'website' => 'required',
+ 	            'phone' => 'required',
+ 	            'siret' => 'required',
+ 	            'denomination' => 'required',
+ 	            'place' => 'required',
+ 	            'city' => 'required',
+ 	            'schedule' => 'required',
+ 	            'description' => 'required',
  			);
 
  			$validator = Validator::make(Input::all(), $rules);
@@ -42,6 +50,14 @@ class AccountController extends Controller {
  				$user->name = Input::get('username');
  				$user->email = Input::get('email');
  				$user->compagny = Input::get('compagny');
+ 				$user->website = Input::get('website');
+ 				$user->phone = Input::get('phone');
+ 				$user->siret = Input::get('siret');
+ 				$user->denomination = Input::get('denomination');
+ 				$user->place = Input::get('place');
+ 				$user->city = Input::get('city');
+ 				$user->schedule = Input::get('schedule');
+ 				$user->description = Input::get('description');
  				$user->save();
  		        Session::flash('response', 'user-updated');
  				return Redirect::route('dashboard.account.index');

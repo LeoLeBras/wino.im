@@ -58,7 +58,7 @@
                 @endif
             </div>
             <div>
-                <label for="color">Couleur :</label>
+                <label for="color">Type :</label>
                 <div class="input-select" data-placeholder="Choisir une couleur">
                     <input type="text" name="color" readonly
                     @if(isset($wine) && $wine != '')
@@ -85,7 +85,7 @@
                 @endif
             </div>
             <div>
-                <label for="year">Millésime :</label>
+                <label for="year">Année :</label>
                 <input id="year" name="year" type="text" @if(isset($wine) && $wine != '') value="{{ $wine->year }}" @endif value="{{ old('year') }}" @if(Session::has('year')) class="-error" @endif>
                 <div class="input-info">
                     ex: 1999
