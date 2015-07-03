@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller {
 
-	public function __construct(){
-		$this->middleware('guest');
-	}
-
 	public function index(){
 		$title = 'Wino | Votre nouveau canal de vente';
 		return view('public.home', compact("title"));

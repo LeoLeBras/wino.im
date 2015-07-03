@@ -2,3 +2,4 @@
 .env
 /htdocs/.htaccess
 /config/app.php
+password.rd
