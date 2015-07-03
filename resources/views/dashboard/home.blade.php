@@ -1,7 +1,7 @@
 @extends('dashboard/layout-backoffice')
 
 @section('breadcrumb')
-    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Accueil</a></li> 
+    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Accueil</a></li>
 @endsection
 
 @section('content')
@@ -26,6 +26,9 @@
             @endif
         </div>
     @endif
+    @if(count($wines) == 0)
+    <br>Aucun vin enregistré
+    @else
     <table class="List">
         <thead class="List_header">
             <tr>
@@ -54,7 +57,8 @@
                     <a class="-delete" href="{{ URL::route('dashboard.wine.remove', $wine->id) }}"></a>
                 </td>
             </tr>
-            @endforeach            
+            @endforeach
         </tbody>
     </table>
+    @endif
 @endsection
