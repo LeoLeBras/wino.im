@@ -1,8 +1,8 @@
 @extends('dashboard/layout-assistance')
 
 @section('breadcrumb')
-    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.assistance.index') }}" class="Breadcrumb_link">FAQ</a></li> 
-    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.assistance.question', [$faq['group'], $faq['item']]) }}" class="Breadcrumb_link">{{ $faq['question'] }}</a></li> 
+    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.assistance.index') }}" class="Breadcrumb_link">FAQ</a></li>
+    <li class="Breadcrumb_item"><a href="{{ URL::route('dashboard.assistance.question', [$faq['category_id'], $faq['id']]) }}" class="Breadcrumb_link">{{ $faq['question'] }}</a></li> 
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
     <div class="Faq_item">
         <h2 class="Wrapper_title Faq_title">{{ $faq['question'] }}</h2>
         <p class="Faq_text">
-            {{ $faq['content'] }}
+            {{ $faq['answer'] }}
         </p>
     </div>
     <div class="Faq_section -small-contact">

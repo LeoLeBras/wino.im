@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\BackOffice;
+<?php namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ class WinesController extends Controller {
     }
 
 	/**
-	 * Display a listing of the resource. 
+	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
@@ -74,7 +74,7 @@ class WinesController extends Controller {
 				return Redirect::route('backoffice.index');
 			}
 		}
-			
+
 	}
 
 	public function remove($id){

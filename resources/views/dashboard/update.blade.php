@@ -1,13 +1,13 @@
 @extends('dashboard/layout-backoffice')
 
 @section('breadcrumb')
-    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Mes vins</a></li> 
-    <li class="Breadcrumb_item"><a href="{{ 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] }}" class="Breadcrumb_link">Modifier un vin</a></li> 
+    <li class="Breadcrumb_item"><a href="{{ URL::route('backoffice.index') }}" class="Breadcrumb_link">Mes vins</a></li>
+    <li class="Breadcrumb_item"><a href="{{ 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] }}" class="Breadcrumb_link">Modifier un vin</a></li>
 @endsection
 
 @section('content')
     <h2 class="Wrapper_title">Modifier un vin</h2>
-    <form method="POST" action="{{ URL::route('dashboard.wine.update', $wine->id) }}"> 
+    <form method="POST" action="{{ URL::route('dashboard.wine.update', $wine->id) }}">
         @if(Session::has('response') && Session::get('response') == 'error')
             <div class="alerts">
                 <div class="alert -error">
@@ -48,8 +48,8 @@
             </div>
             <div>
                 <label for="name">Vin :</label>
-                <input id="name" name="name" type="text" 
-                    @if(isset($wine) && $wine != '') value="{{ $wine->name }}" @endif 
+                <input id="name" name="name" type="text"
+                    @if(isset($wine) && $wine != '') value="{{ $wine->name }}" @endif
                     value="{{ old('name') }}" @if(Session::has('name')) class="-error" @endif>
                 @if(Session::has('name'))
                     <div class="input-alert">
@@ -60,8 +60,8 @@
             <div>
                 <label for="color">Couleur :</label>
                 <div class="input-select" data-placeholder="Choisir une couleur">
-                    <input type="text" name="color" readonly 
-                    @if(isset($wine) && $wine != '') 
+                    <input type="text" name="color" readonly
+                    @if(isset($wine) && $wine != '')
                         @if($wine->color == 'white')
                             {{ $color = 'Blanc' }}
                         @elseif($wine->color == 'pink')
@@ -69,7 +69,7 @@
                         @else
                             {{ $color = 'Rouge' }}
                         @endif
-                        value="{{ $color }}" 
+                        value="{{ $color }}"
                     @endif
                     value="{{ old('color') }}" @if(Session::has('color')) class="-error" @endif>
                     <ul>
@@ -124,7 +124,7 @@
             <button class="btn -blue">Vailder</button>
         </div>
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-    </form>    
+    </form>
 @endsection
 
 @section('javascript')

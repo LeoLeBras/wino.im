@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Website;
+<?php namespace App\Http\Controllers\Caviste;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
