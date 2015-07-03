@@ -42,15 +42,6 @@
                 @endif
             </div>
             <div>
-                <label for="username">Utilsateur :</label>
-                <input @if(Session::has('username')) class="-error" @endif type="text" name="username" id="username" @if(isset($user) && $user != '') value="{{ $user->name }}" @endif value="{{ old('username') }}">
-                @if(Session::has('username'))
-                    <div class="input-alert">
-                        Champ non renseigné.
-                    </div>
-                @endif
-            </div>
-            <div>
                 <label for="website">Website :</label>
                 <input @if(Session::has('website')) class="-error" @endif type="text" name="website" id="website" @if(isset($user) && $user != '') value="{{ $user->website }}" @endif value="{{ old('website') }}">
                 @if(Session::has('website'))
@@ -89,15 +80,6 @@
         	<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
         </fieldset>
         <fieldset>
-            <div>
-                <label for="compagny">Entreprise :</label>
-                <input @if(Session::has('compagny')) class="-error" @endif type="text" name="compagny" id="compagny" @if(isset($user) && $user != '') value="{{ $user->compagny }}" @endif value="{{ old('compagny') }}">
-                @if(Session::has('compagny'))
-                    <div class="input-alert">
-                        Champ non renseigné.
-                    </div>
-                @endif
-            </div>
             <div>
                 <label for="compagny">Entreprise :</label>
                 <input @if(Session::has('compagny')) class="-error" @endif type="text" name="compagny" id="compagny" @if(isset($user) && $user != '') value="{{ $user->compagny }}" @endif value="{{ old('compagny') }}">
