@@ -28,7 +28,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="product-right">
             <div class="background-image-holder">
                 <img class="background-image" alt="Background Image" src="img/grey-bg.jpg">
@@ -48,6 +48,7 @@
                 <img alt="Product Image" src="img/ipad.png">
             </div>
         </section>
+        <!--
         <section class="pure-text-centered">
             <div class="container">
                 <div class="row">
@@ -58,7 +59,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <header class="signup">
                 <div class="background-image-holder parallax-background">
                     <img class="background-image" alt="Background Image" src="img/hero5.jpg">
@@ -93,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
         </header>
     </div>
 @endsection

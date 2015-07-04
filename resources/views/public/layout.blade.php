@@ -54,8 +54,8 @@
                         <div class="col-sm-4 col-xs-offset-1">
                             <h1>Contact</h1>
                             <p>
-                                hello@winoapp.io<br>
-                                + NUM TEL<br>
+                                hello@wino.im<br>
+                                +33 643 060 672<br>
                                 <br>
                                 27 Rue du Chazeau<br>
                                 54220 Malzeville<br>
