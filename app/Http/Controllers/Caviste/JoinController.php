@@ -10,8 +10,6 @@ class JoinController extends Controller {
 
 	public function send(){
 		Mail::send('emails.invit', [
-			'name' => Input::get('name'),
-			'email' => Input::get('email'),
 			'phone' => Input::get('phone'),
 			'date' => Date::now()->format('l j F Y').' à '.Date::now()->format('H:i:s')],
 

@@ -37,8 +37,6 @@ Route::group(['prefix' => 'caviste'], function(){
     Route::group(['namespace' => "Caviste"], function(){
         Route::get('/', ['as' => 'homepage', 'uses' => 'HomeController@index']);
         Route::get('/join', ['as' => 'join', 'uses' => 'JoinController@send']);
-        Route::get('register', array('middleware' => 'admin', 'as' => 'register', 'uses' => 'RegisterController@showRegister'));
-        Route::post('register', array('uses' => 'RegisterController@doRegister'));
     });
 
     Route::group(['namespace' => "Auth", 'prefix' => 'auth'], function(){
