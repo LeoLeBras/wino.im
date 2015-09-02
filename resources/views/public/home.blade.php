@@ -207,9 +207,7 @@
 						<div class="col-md-6 col-sm-12">
 							<div class="inline-video-wrapper">
 								<video controls="">
-									<source type="video/webm" src="video/winopubcaviste.m4v">
 									<source type="video/mp4" src="video/winopubcaviste.m4v">
-									<source type="video/ogg" src="video/winopubcaviste.m4v">
 								</video>
 							</div>
 						</div>
