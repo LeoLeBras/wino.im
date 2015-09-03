@@ -27,7 +27,7 @@
 							<i class="icon icon-compass"></i>
 							<h1 class="jumbo">404</h1>
 							<h1><strong>Oops, la bouteille semble vide !</strong><br>Vous n'êtes sûrement pas sur la bonne page...</h1>
-							<a href="#" class="btn btn-primary btn-white">Retour acceuil</a>
+							<a href="{{ URL::route('homepage') }}" class="btn btn-primary btn-white">Retourner à l'accueil</a>
 						</div>
 					</div>
 				</div>
