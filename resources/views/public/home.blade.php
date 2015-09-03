@@ -221,7 +221,7 @@
 							<h3 class="text-white"><strong>Télécharger</strong> notre documentation</h3>
 						</div>
 						<div class="col-sm-4 col-xs-12 pull-right text-right">
-							<a href="assets/doc.pdf" class="btn btn-primary btn-white" target="default">Version PDF</a>
+							<a href="http://media.wino.im/doc.pdf" class="btn btn-primary btn-white" target="default">Version PDF</a>
 						</div>
 					</div>
 				</div>
