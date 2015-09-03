@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="{{ asset('css/public.min.css') }}">
         <!--[if gte IE 9]>
-        	<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+        	<link rel="stylesheet" type="text/css" href="{{ asset('css/ie9.css') }}" />" />
 		<![endif]-->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700' rel='stylesheet' type='text/css'>
     </head>
