@@ -206,9 +206,7 @@
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="inline-video-wrapper">
-								<video controls="">
-									<source type="video/mp4" src="http://media.wino.im/winopubcaviste.m4v">
-								</video>
+								<iframe width="100%" height="300px" src="https://www.youtube.com/embed/clXJrHM--Po" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
