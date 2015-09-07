@@ -206,7 +206,7 @@
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="inline-video-wrapper">
-								<iframe width="100%" height="300px" src="https://www.youtube.com/embed/clXJrHM--Po" frameborder="0" allowfullscreen></iframe>
+								<iframe width="100%" height="321px" src="https://www.youtube.com/embed/clXJrHM--Po" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
