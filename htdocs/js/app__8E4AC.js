@@ -28,7 +28,7 @@ var t=new S(function(){});return e&&(t.constructor=Object),S.resolve(t)===t},O=f
 	Math.uuid.js (v1.4)
 	http://www.broofa.com
 	mailto:robert@broofa.com
-
+	
 	Copyright (c) 2010 Robert Kieffer
 	Dual licensed under the MIT and GPL licenses.
 	*/
@@ -40,7 +40,7 @@ function(r){if(r.doc||(r.doc={}),e.filter&&n&&!e.filter.call(this,r.doc,t))retur
 	Math.uuid.js (v1.4)
 	http://www.broofa.com
 	mailto:robert@broofa.com
-
+	
 	Copyright (c) 2010 Robert Kieffer
 	Dual licensed under the MIT and GPL licenses.
 	*/
@@ -48,7 +48,7 @@ var o="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("")
 	Math.uuid.js (v1.4)
 	http://www.broofa.com
 	mailto:robert@broofa.com
-
+	
 	Copyright (c) 2010 Robert Kieffer
 	Dual licensed under the MIT and GPL licenses.
 	*/
