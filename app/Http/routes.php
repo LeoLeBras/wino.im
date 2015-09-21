@@ -36,6 +36,7 @@ Route::group(['prefix' => 'caviste'], function(){
 
     Route::group(['namespace' => "Caviste"], function(){
         Route::get('/', ['as' => 'homepage', 'uses' => 'HomeController@index']);
+        Route::get('/wino-manager', ['as' => 'wino-manager', 'uses' => 'WinoManagerController@index']);
         Route::get('/join', ['as' => 'join', 'uses' => 'JoinController@send']);
     });
 
