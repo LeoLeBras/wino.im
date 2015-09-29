@@ -13,6 +13,7 @@
 
 Route::group(['namespace' => 'Website'], function(){
     Route::get('/', ['uses' => 'HomeController@index']);
+    Route::get('/beta', ['as' => 'beta', 'uses' => 'BetaController@index']);
 });
 Route::group(['prefix' => 'caviste'], function(){
     Route::group(['namespace' => "Dashboard", 'prefix' => 'dashboard'], function(){
