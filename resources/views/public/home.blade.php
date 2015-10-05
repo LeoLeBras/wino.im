@@ -44,6 +44,12 @@
                 color: black;
             }
         </style>
+		<script>
+		  window.intercomSettings = {
+		    app_id: "ii51ti8x"
+		  };
+		</script>
+		<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ii51ti8x';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
     </head>
     <body>
     	<div class="loader">
@@ -235,6 +241,7 @@
 							<h2 class="text-white">C'est simple, gratuit et bénéfique pour votre entreprise. Demandez à être rappelé.</h2>
                               <form class="join">
                                 <input class="form-email" type="text" name="phone" placeholder="Numéro de téléphone">
+                                <div class="form-phone-error" style="display: none; position: absolute; text-align: center; width: 100%; color: #e6ced6; margin-left: -100px; margin-top: -22px;">Numéro de téléphone non valide !</div>
                                 <input class="login-btn btn-filled" type="submit" value="Appelez-moi">
                               </form>
 						</div>
@@ -266,44 +273,50 @@
               ga('create', 'UA-67066384-1', 'auto');
               ga('send', 'pageview');
         </script>
-		<script>
-			window.intercomSettings = {
-				app_id: "ii51ti8x"
-			};
-		</script>
-		<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ii51ti8x';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
         <script src="{{ asset('js/public.min.js') }}"></script>
         <script>
             $(document).ready(function(){
                 $('.join').submit(function(e){
                     e.preventDefault();
-                    var inputs = ['phone'];
-                    var data = [];
+                    var inputs = ['phone'],
+                    	data = [];
+
                     for(var i in inputs){
                         data[inputs[i]] = $('input[name="' + inputs[i] + '"]').val();
                     }
-                    $.ajax({
-                        method: 'GET',
-                        url: '{{ URL::route('join') }}',
-                        data: {
-                            phone: data['phone']
-                        },
-                        success: function(){
-                            var $submit = $('.login-btn.btn-filled');
-                            var text = $submit.val();
-                            var background = $submit.css('backgroundColor');
-                            $submit.val('Envoyé ! :)').css('backgroundColor', '#86B16C');
-                            setTimeout(function(){
-                                $submit.val(text).css('backgroundColor', background);
-                                for(i in inputs){
-                                    $('input[name="' + inputs[i] + '"]').val('');
-                                }
-                            },5000);
-                        },
-                        error: function(){
-                            alert('ERROR !');
-                        }
-                    });
+
+                    if(/^0[1-9]([-. ]?[0-9]{2}){4}$/.test(data['phone'])) {
+	                    $.ajax({
+	                        method: 'GET',
+	                        url: '{{ URL::route('join') }}',
+	                        data: {
+	                            phone: data['phone']
+	                        },
+	                        success: function(){
+	                            var $submit = $('.login-btn.btn-filled'),
+	                           		text = $submit.val(),
+	                           		background = $submit.css('backgroundColor');
+	                            $submit.val('Envoyé ! :)').css('backgroundColor', '#86B16C');
+		                    	$('.form-phone-error').css({
+		                    		display: 'none'
+		                    	});
+	                            setTimeout(function(){
+	                                $submit.val(text).css('backgroundColor', background);
+	                                for(i in inputs){
+	                                    $('input[name="' + inputs[i] + '"]').val('');
+	                                }
+	                            },5000);
+	                        },
+	                        error: function(){
+	                            alert('!! ERROR SERVER !!');
+	                        }
+	                    });
+                    }
+                    else {
+                    	$('.form-phone-error').css({
+                    		display: 'block'
+                    	});
+                    }
                 });
             });
         </script>
