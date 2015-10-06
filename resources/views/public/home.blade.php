@@ -257,7 +257,7 @@
 				</div>
 			</footer>
 		</div>
-		<script type="text/javascript" src="http://livechat.wino.im/php/app.php?widget-init.js"></script>
+		<script type="text/javascript" src="https://wino.im/livechat/php/app.php?widget-init.js"></script>
         <script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
