@@ -7,6 +7,6 @@
 </head>
 <body>
     <div class="WinoManager__9EAzG"></div>
-    <script src="{{ asset('/js/wino-manager__15BC9.js') }}"></script>
+    <script src="{{ asset('/js/wino-manager__7E8A2.js') }}"></script>
 </body>
 </html>
