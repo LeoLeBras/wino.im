@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BetaController extends Controller {
 
 	public function index(){
-		return view('public.beta');
+		return redirect('http://beta.wino.im');
 	}
 
 }
